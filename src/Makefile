@@ -1,9 +1,9 @@
 
 EXEC=rastertotpcl
-CFLAGS=-lcupsimage
-PPDPATH=/usr/share/ppd
-EXECPATH=/usr/lib/cups/filter
-
+CFLAGS=/usr/lib/libcups.2.dylib /usr/lib/libcupsimage.2.dylib
+PPDPATH=/private/etc/cups/ppd
+EXECPATH=/usr/libexec/cups/filter
+ 
 all: rastertotpcl ppd
 
 .PHONY: ppd clean install uninstall
